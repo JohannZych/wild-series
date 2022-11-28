@@ -13,4 +13,10 @@ class ProgramController extends AbstractController
     {
         return $this->render('program/index.html.twig', ['website' => 'Wild Series']);
     }
+
+    #[Route('/program/{id}/', name: 'program_show', requirements: ['id' => '\d+'], methods: ['GET'])]
+    public function show(int $id): Response
+    {
+        return $this->render('program/show.html.twig', ['id' => $id]);
+    }
 }
