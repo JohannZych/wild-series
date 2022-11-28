@@ -1,3 +1,10 @@
+$bgNav: #EC008C;
+
+
 body {
-    background-color: blue;
+    background-color: dimgray;
+}
+
+.bg-perso{
+    background-color: $bgNav;
 }

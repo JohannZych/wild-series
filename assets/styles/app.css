@@ -1,5 +1,9 @@
 body {
-  background-color: blue;
+  background-color: dimgray;
+}
+
+.bg-perso {
+  background-color: #EC008C;
 }
 
 /*# sourceMappingURL=app.css.map */
