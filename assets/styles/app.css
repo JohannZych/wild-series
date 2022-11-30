@@ -6,4 +6,17 @@ body {
   background-color: #EC008C;
 }
 
+h1 {
+  color: greenyellow;
+}
+
+a {
+  text-decoration: none;
+  color: aquamarine;
+}
+
+a:hover {
+  color: aqua;
+}
+
 /*# sourceMappingURL=app.css.map */
