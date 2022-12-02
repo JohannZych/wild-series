@@ -22,16 +22,18 @@
         </div>
 
     {% else %}
-
         Aucune série trouvée.
-
     {% endfor %}
-
-
-    <a href="{{ path('app_index') }}">
-
-        Retour à l'accueil
-
-    </a>
+    <br>
+    <p>
+        <a href="{{ path('program_new') }}">
+            Ajouter un film
+        </a>
+    </p>
+    <p>
+        <a href="{{ path('app_index') }}">
+            Retour à l'accueil
+        </a>
+    </p>
 
 {% endblock %}

@@ -1,34 +1,36 @@
 {% extends 'base.html.twig' %}
 {% block title %}Catégories {{ category.name }}{% endblock %}
 {% block body %}
-{%  for program in programs %}
-    <div class="media">
+    {% for program in programs %}
+        <div class="media">
 
-        <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">
+            <img class="align-self-start mr-3" src="{{ program.poster }}" alt="{{ program.title }} poster">
 
-        <div class="media-body">
+            <div class="media-body">
 
-            <h1 class="mt-0">{{ program.title }}</h1>
+                <h1 class="mt-0">{{ program.title }}</h1>
 
-            <p>{{ program.synopsis }}</p>
+                <p>{{ program.synopsis }}</p>
 
-            <p>Catégorie : {{ program.category.name }}</p>
+                <p>Catégorie : {{ program.category.name }}</p>
+
+            </div>
 
         </div>
-
-    </div>
     {% endfor %}
-{#    <div class="media">#}
-{#        <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">#}
-{#        <div class="media-body">#}
-{#            <h1 class="mt-0">{{ program.title }}</h1>#}
-{#            <p>{{ program.synopsis }}</p>#}
-{#            <p>Catégorie : {{ program.category.name }}</p>#}
-{#        </div>#}
-{#    </div>#}
+    {#    <div class="media"> #}
+    {#        <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster"> #}
+    {#        <div class="media-body"> #}
+    {#            <h1 class="mt-0">{{ program.title }}</h1> #}
+    {#            <p>{{ program.synopsis }}</p> #}
+    {#            <p>Catégorie : {{ program.category.name }}</p> #}
+    {#        </div> #}
+    {#    </div> #}
 
-    <a href="{{ path('app_index') }}">
-        Retour à l'accueil
-    </a>
+    <p>
+        <a href="{{ path('app_index') }}">
+            Retour à l'accueil
+        </a>
+    </p>
 
 {% endblock %}

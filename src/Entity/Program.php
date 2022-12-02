@@ -30,7 +30,7 @@ class Program
     private ?Category $category = null;
 
     #[ORM\OneToMany(mappedBy: 'program', targetEntity: Season::class)]
-    private Collection $ss;
+    private Collection $seasons;
 
     public function __construct()
     {
@@ -93,27 +93,27 @@ class Program
     /**
      * @return Collection<int, Season>
      */
-    public function getSs(): Collection
+    public function getSeasons(): Collection
     {
-        return $this->ss;
+        return $this->seasons;
     }
 
-    public function addSs(Season $ss): self
+    public function addSeason(Season $season): self
     {
-        if (!$this->ss->contains($ss)) {
-            $this->ss->add($ss);
-            $ss->setProgram($this);
+        if (!$this->seasons->contains($season)) {
+            $this->seasons->add($season);
+            $season->setProgram($this);
         }
 
         return $this;
     }
 
-    public function removeSs(Season $ss): self
+    public function removeSeason(Season $season): self
     {
-        if ($this->ss->removeElement($ss)) {
+        if ($this->seasons->removeElement($season)) {
             // set the owning side to null (unless already changed)
-            if ($ss->getProgram() === $this) {
-                $ss->setProgram(null);
+            if ($season->getProgram() === $this) {
+                $season->setProgram(null);
             }
         }
 
